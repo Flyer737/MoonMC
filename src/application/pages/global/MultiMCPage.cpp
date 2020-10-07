@@ -74,7 +74,7 @@ MultiMCPage::MultiMCPage(QWidget *parent) : QWidget(parent), ui(new Ui::MultiMCP
     // Analytics
     if(BuildConfig.ANALYTICS_ID.isEmpty())
     {
-        ui->tabWidget->removeTab(ui->tabWidget->indexOf(ui->analyticsTab));
+        //ui->tabWidget->removeTab(ui->tabWidget->indexOf(ui->analyticsTab));
     }
     connect(ui->fontSizeBox, SIGNAL(valueChanged(int)), SLOT(refreshFontPreview()));
     connect(ui->consoleFont, SIGNAL(currentFontChanged(QFont)), SLOT(refreshFontPreview()));
@@ -309,7 +309,7 @@ void MultiMCPage::applySettings()
     // Analytics
     if(!BuildConfig.ANALYTICS_ID.isEmpty())
     {
-        s->set("Analytics", ui->analyticsCheck->isChecked());
+        //s->set("Analytics", ui->analyticsCheck->isChecked());
     }
 }
 void MultiMCPage::loadSettings()
@@ -410,7 +410,7 @@ void MultiMCPage::loadSettings()
     // Analytics
     if(!BuildConfig.ANALYTICS_ID.isEmpty())
     {
-        ui->analyticsCheck->setChecked(s->get("Analytics").toBool());
+      //  ui->analyticsCheck->setChecked(s->get("Analytics").toBool());
     }
 }
 

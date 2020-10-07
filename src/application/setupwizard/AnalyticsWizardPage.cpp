@@ -22,42 +22,41 @@ AnalyticsWizardPage::AnalyticsWizardPage(QWidget *parent)
 
     checkBox = new QCheckBox(this);
     checkBox->setObjectName(QStringLiteral("checkBox"));
-    checkBox->setChecked(true);
+    checkBox->setChecked(false);
     verticalLayout_3->addWidget(checkBox);
+    checkBox->setChecked(false);
     retranslate();
 }
 
 AnalyticsWizardPage::~AnalyticsWizardPage()
 {
+  checkBox->setChecked(false);
 }
 
 bool AnalyticsWizardPage::validatePage()
 {
+    checkBox->setChecked(false);
     auto settings = MMC->settings();
+    checkBox->setChecked(false);
     auto analytics = MMC->analytics();
+checkBox->setChecked(false);
     auto status = checkBox->isChecked();
+    checkBox->setChecked(false);
     settings->set("AnalyticsSeen", analytics->version());
     settings->set("Analytics", status);
+    checkBox->setChecked(false);
     return true;
 }
 
 void AnalyticsWizardPage::retranslate()
 {
-    setTitle(tr("Analytics"));
-    setSubTitle(tr("We track some anonymous statistics about users."));
+    setTitle(tr("Heads up"));
+    setSubTitle(tr(" "));
+    checkBox->setChecked(false);
     textBrowser->setHtml(tr(
         "<html><body>"
-        "<p>MultiMC sends anonymous usage statistics on every start of the application. This helps us decide what platforms and issues to focus on.</p>"
-        "<p>The data is processed by Google Analytics, see their <a href=\"https://support.google.com/analytics/answer/6004245?hl=en\">article on the "
-        "matter</a>.</p>"
-        "<p>The following data is collected:</p>"
-        "<ul><li>A random unique ID of the MultiMC installation.<br />It is stored in the application settings (multimc.cfg).</li>"
-        "<li>Anonymized (partial) IP address.</li>"
-        "<li>MultiMC version.</li>"
-        "<li>Operating system name, version and architecture.</li>"
-        "<li>CPU architecture (kernel architecture on linux).</li>"
-        "<li>Size of system memory.</li>"
-        "<li>Java version, architecture and memory settings.</li></ul>"
-        "<p>If we change the tracked information, you will see this page again.</p></body></html>"));
-    checkBox->setText(tr("Enable Analytics"));
+    
+        "<p>\n\n\n<b><u>Neither MoonMC or her creators collect or store any information about you.</b></u> This is a fork of MultiMC and some things still need to be removed.</p>"));
+    //checkBox->setText(tr("Enable Analytics")); checkBox->setChecked(false);
+    checkBox->setChecked(false);
 }

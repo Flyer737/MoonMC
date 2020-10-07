@@ -1,21 +1,22 @@
-# Linux Build
+# Linux
 
-Getting the project to build and run on Linux is easy if you use any modern and up-to-date linux distribution.
+Use any modern and up-to-date linux distro.
 
-## Build dependencies
-* gcc or any other compiler 
-* cmake 3.1 or newer
-* zlib1g-dev
-* openjdk-8-jdk
-* libgl1-mesa-dev
+## Install build dependencies
+* `gcc`
+* `cmake`
+* `zlib1g-dev`
+* `openjdk-8-jdk`
+* `libgl1-mesa-dev`
 
-Once downloaded and/or extracted, cd into the directory.
-Build and install directories have already been created.
+Once downloaded and/or extracted, open the terminal and cd into the MoonMC directory.
+Run the following:
 ```
+mkdir build && mkdir install
 cd build
 cmake -DCMAKE_INSTALL_PREFIX=../install ../src
-# build & install (use -j with the number of cores your CPU has)
-make -j8 install
+# build & install (use -j# with # being the number of cores your CPU has.)
+make -j4 install
 ```
 
-The built application will be in the install folder. :)
+Once completed, the built MoonMC executable will be in the install folder.

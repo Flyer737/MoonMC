@@ -206,7 +206,7 @@ elseif(MultiMC_LAYOUT_REAL STREQUAL "lin-nodeps")
     install(PROGRAMS application/package/linux/MultiMC DESTINATION ${BUNDLE_DEST_DIR})
 
 elseif(MultiMC_LAYOUT_REAL STREQUAL "lin-system")
-    set(MultiMC_APP_BINARY_NAME "multimc" CACHE STRING "Name of the MultiMC binary")
+    set(MultiMC_APP_BINARY_NAME "MoonMC" CACHE STRING "Name of the MultiMC binary")
     set(MultiMC_BINARY_DEST_DIR "bin" CACHE STRING "Path to the binary directory")
     set(MultiMC_LIBRARY_DEST_DIR "lib${LIB_SUFFIX}" CACHE STRING "Path to the library directory")
     set(MultiMC_SHARE_DEST_DIR "share/multimc" CACHE STRING "Path to the shared data directory")
@@ -230,7 +230,7 @@ elseif(MultiMC_LAYOUT_REAL STREQUAL "win-bundle")
     set(JARS_DEST_DIR "jars")
 
     # Apps to bundle
-    set(APPS "\${CMAKE_INSTALL_PREFIX}/MultiMC.exe")
+    set(APPS "\${CMAKE_INSTALL_PREFIX}/MoonMC.exe")
 
     # directories to look for dependencies
     set(DIRS ${QT_LIBS_DIR} ${QT_LIBEXECS_DIR} ${CMAKE_LIBRARY_OUTPUT_DIRECTORY} ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})

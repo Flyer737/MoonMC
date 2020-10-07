@@ -137,10 +137,10 @@ MultiMC::MultiMC(int &argc, char **argv) : QApplication(argc, argv)
         consoleAttached = true;
     }
 #endif
-    setOrganizationName("MultiMC");
-    setOrganizationDomain("multimc.org");
-    setApplicationName("MultiMC5");
-    setApplicationDisplayName("MultiMC 5");
+    setOrganizationName("MoonMC");
+    setOrganizationDomain("N/A");
+    setApplicationName(" MoonMC ");
+    setApplicationDisplayName("MoonMC v1.1");
     setApplicationVersion(BuildConfig.printableVersionString());
 
     startTime = QDateTime::currentDateTime();
@@ -326,7 +326,7 @@ MultiMC::MultiMC(int &argc, char **argv) : QApplication(argc, argv)
 
     // init the logger
     {
-        static const QString logBase = "MultiMC-%0.log";
+        static const QString logBase = "MultiMC-Latest.log";
         auto moveFile = [](const QString &oldName, const QString &newName)
         {
             QFile::remove(newName);
@@ -378,10 +378,8 @@ MultiMC::MultiMC(int &argc, char **argv) : QApplication(argc, argv)
         ENV.setJarsPath( TOSTRING(MULTIMC_JARS_LOCATION) );
 #endif
 
-        qDebug() << "MultiMC 5, (c) 2013-2019 MultiMC Contributors";
-        qDebug() << "Version                    : " << BuildConfig.printableVersionString();
-        qDebug() << "Git commit                 : " << BuildConfig.GIT_COMMIT;
-        qDebug() << "Git refspec                : " << BuildConfig.GIT_REFSPEC;
+        qDebug() << "MoonMC 2020";
+        qDebug() << "Version                    : 1.1";
         if (adjustedBy.size())
         {
             qDebug() << "Work dir before adjustment : " << origcwdPath;
@@ -431,7 +429,7 @@ MultiMC::MultiMC(int &argc, char **argv) : QApplication(argc, argv)
 
         // Theming
         m_settings->registerSetting("IconTheme", QString("multimc"));
-        m_settings->registerSetting("ApplicationTheme", QString("system"));
+        m_settings->registerSetting("ApplicationTheme", QString("dark"));
 
         // Notifications
         m_settings->registerSetting("ShownNotifications", QString());
@@ -552,7 +550,7 @@ MultiMC::MultiMC(int &argc, char **argv) : QApplication(argc, argv)
             // Analytics
             m_settings->registerSetting("Analytics", true);
             m_settings->registerSetting("AnalyticsSeen", 0);
-            m_settings->registerSetting("AnalyticsClientID", QString());
+            m_settings->registerSetting("AnalyticsClientID", "xxxx");
         }
 
         // Init page provider

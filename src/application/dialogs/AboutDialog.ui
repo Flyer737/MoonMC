@@ -17,7 +17,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>About MultiMC</string>
+   <string>About MoonMC</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
@@ -113,7 +113,7 @@
        <item>
         <widget class="QLabel" name="platformLabel">
          <property name="text">
-          <string>Platform:</string>
+          <string>Platforms directly supported: Linux</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
@@ -133,7 +133,7 @@
        <item>
         <widget class="QLabel" name="channelLabel">
          <property name="text">
-          <string>Channel:</string>
+          <string></string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
@@ -146,7 +146,7 @@
           <bool>true</bool>
          </property>
          <property name="text">
-          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MultiMC is a custom launcher that makes managing Minecraft easier by allowing you to have multiple instances of Minecraft at once.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MoonMC is a fork of MultiMC. MoonMC uses some different icons and removes some ui elements for a Minecraft only experience.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
@@ -165,7 +165,7 @@
           </font>
          </property>
          <property name="text">
-          <string>© 2012-2019 MultiMC Contributors</string>
+          <string>2020</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
@@ -180,7 +180,7 @@
           </font>
          </property>
          <property name="text">
-          <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/MultiMC/MultiMC5&quot;&gt;https://github.com/MultiMC/MultiMC5&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/flyer737/MoonMC&quot;&gt;https://github.com/flyer737/MoonMC&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
@@ -249,7 +249,7 @@
      </widget>
      <widget class="QWidget" name="forkingTab">
       <attribute name="title">
-       <string>Forking/Redistribution</string>
+       <string>Thank you</string>
       </attribute>
       <layout class="QVBoxLayout" name="verticalLayout_4">
        <item>
@@ -303,7 +303,7 @@
   <tabstop>tabWidget</tabstop>
   <tabstop>creditsText</tabstop>
   <tabstop>licenseText</tabstop>
-  <tabstop>redistributionText</tabstop>
+  <!-- <tabstop>redistributionText</tabstop> -->
   <tabstop>aboutQt</tabstop>
   <tabstop>closeButton</tabstop>
  </tabstops>

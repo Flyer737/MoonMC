@@ -43,5 +43,8 @@ private:
     Ui::AboutDialog *ui;
 
     NetJobPtr netJob;
+
+
+
     QByteArray dataSink;
 };

@@ -39,7 +39,7 @@
        <item>
         <widget class="QLabel" name="proxyPlainTextWarningLabel_2">
          <property name="text">
-          <string>This only applies to MultiMC. Minecraft does not accept proxy settings.</string>
+          <string>Minecraft does not accept proxy settings.</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>

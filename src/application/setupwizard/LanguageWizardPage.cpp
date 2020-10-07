@@ -43,6 +43,6 @@ bool LanguageWizardPage::validatePage()
 void LanguageWizardPage::retranslate()
 {
     setTitle(tr("Language"));
-    setSubTitle(tr("Select the language to use in MultiMC"));
+    setSubTitle(tr("Select the language to use in MoonMC"));
     mainWidget->retranslate();
 }

@@ -33,21 +33,17 @@ QString getCreditsHtml(QStringList patrons)
     QTextStream stream(&output);
     stream << "<center>\n";
     // TODO: possibly retrieve from git history at build time?
-    stream << "<h3>" << QObject::tr("MultiMC Developers", "About Credits") << "</h3>\n";
-    stream << "<p>Andrew Okin &lt;<a href='mailto:forkk@forkk.net'>forkk@forkk.net</a>&gt;</p>\n";
-    stream << "<p>Petr Mrázek &lt;<a href='mailto:peterix@gmail.com'>peterix@gmail.com</a>&gt;</p>\n";
-    stream << "<p>Sky Welch &lt;<a href='mailto:multimc@bunnies.io'>multimc@bunnies.io</a>&gt;</p>\n";
-    stream << "<p>Jan (02JanDal) &lt;<a href='mailto:02jandal@gmail.com'>02jandal@gmail.com</a>&gt;</p>\n";
-    stream << "<p>RoboSky &lt;<a href='https://twitter.com/RoboSky_'>@RoboSky_</a>&gt;</p>\n";
+    stream << "<h3>" << QObject::tr("MoonMC Developers", "About Credits") << "</h3>\n";
+    stream << "<p>Flyer737</p>\n";
     stream << "<br />\n";
 
-    stream << "<h3>" << QObject::tr("With thanks to", "About Credits") << "</h3>\n";
+    /*stream << "<h3>" << QObject::tr("With thanks to", "About Credits") << "</h3>\n";
     stream << "<p>Orochimarufan &lt;<a href='mailto:orochimarufan.x3@gmail.com'>orochimarufan.x3@gmail.com</a>&gt;</p>\n";
     stream << "<p>TakSuyu &lt;<a href='mailto:taksuyu@gmail.com'>taksuyu@gmail.com</a>&gt;</p>\n";
     stream << "<p>Kilobyte &lt;<a href='mailto:stiepen22@gmx.de'>stiepen22@gmx.de</a>&gt;</p>\n";
     stream << "<p>Rootbear75 &lt;<a href='https://twitter.com/rootbear75'>@rootbear75</a>&gt;</p>\n";
     stream << "<p>Zeker Zhayard &lt;<a href='https://twitter.com/zeker_zhayard'>@Zeker_Zhayard</a>&gt;</p>\n";
-    stream << "<br />\n";
+    stream << "<br />\n";*/
 
     if(!patrons.isEmpty()) {
         stream << "<h3>" << QObject::tr("Patrons", "About Credits") << "</h3>\n";
@@ -84,28 +80,23 @@ AboutDialog::AboutDialog(QWidget *parent) : QDialog(parent), ui(new Ui::AboutDia
     ui->urlLabel->setOpenExternalLinks(true);
 
     ui->icon->setPixmap(MMC->getThemedIcon("logo").pixmap(64));
-    ui->title->setText("MultiMC 5");
+    ui->title->setText("MoonMC v1.1");
 
-    ui->versionLabel->setText(tr("Version") +": " + BuildConfig.printableVersionString());
-    ui->platformLabel->setText(tr("Platform") +": " + BuildConfig.BUILD_PLATFORM);
+    ui->versionLabel->setText(tr("Version") +": 1.1");
+    //ui->platformLabel->setText(tr("Platform") +": " + BuildConfig.BUILD_PLATFORM);
 
     if (BuildConfig.VERSION_BUILD >= 0)
         ui->buildNumLabel->setText(tr("Build Number") +": " + QString::number(BuildConfig.VERSION_BUILD));
     else
         ui->buildNumLabel->setVisible(false);
 
-    if (!BuildConfig.VERSION_CHANNEL.isEmpty())
+    /*if (!BuildConfig.VERSION_CHANNEL.isEmpty())
         ui->channelLabel->setText(tr("Channel") +": " + BuildConfig.VERSION_CHANNEL);
     else
-        ui->channelLabel->setVisible(false);
+        ui->channelLabel->setVisible(false);*/
 
     ui->redistributionText->setHtml(tr(
-"<p>We keep MultiMC open source because we think it's important to be able to see the source code for a project like this, and we do so using the Apache license.</p>\n"
-"<p>Part of the reason for using the Apache license is we don't want people using the &quot;MultiMC&quot; name when redistributing the project. "
-"This means people must take the time to go through the source code and remove all references to &quot;MultiMC&quot;, including but not limited to the project "
-"icon and the title of windows, (no <b>MultiMC-fork</b> in the title).</p>\n"
-"<p>The Apache license covers reasonable use for the name - a mention of the project's origins in the About dialog and the license is acceptable. "
-"However, it should be abundantly clear that the project is a fork <b>without</b> implying that you have our blessing.</p>"
+"<p>Thank you for downloading and trying this out!</p>"
     ));
 
     connect(ui->closeButton, SIGNAL(clicked()), SLOT(close()));
