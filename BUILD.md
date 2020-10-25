@@ -6,6 +6,7 @@ Use any modern and up-to-date linux distro.
 * `gcc`
 * `cmake`
 * `zlib1g-dev`
+* `qt5-default`
 * `openjdk-8-jdk`
 * `libgl1-mesa-dev`
 
