@@ -8,6 +8,7 @@ Use any modern and up-to-date linux distro.
 * `zlib1g-dev`
 * `qt5-default`
 * `openjdk-8-jdk`
+* `build-essential`
 * `libgl1-mesa-dev`
 
 Once downloaded and/or extracted, open the terminal and cd into the MoonMC directory.
